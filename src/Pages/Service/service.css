@@ -1,0 +1,173 @@
+.ecommerceImg img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* custom  */
+.Custom h2{
+   text-align: center;
+   padding: 14px 0;
+}
+
+.Custom h3{
+    text-align: center;
+    padding: 14px 0;
+}
+.webdesignflex{
+    gap: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-white{
+    margin-bottom: -1px;
+}
+
+.searchsection{
+    background: #e6ebf2;
+    height: 16vh;
+    width: 100%;
+}
+
+.searchsectionchild{
+    padding-top: 25px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.searchsection input{
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 9px 30px;
+}
+
+.searchsectionchild i{
+    background-color: #3498db;
+    padding: 8px 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+    border: 1px solid #3498db;
+}
+
+.searchsectionchild i:hover{
+    background: #fff;
+    color: #3498db;
+}
+
+.categories{
+    background-color: #e6ebf2;
+    margin-top: 3rem;
+}
+
+.categorieschild{
+    padding: 23px 19px;
+}
+
+.webDevelopment,
+.MobileAppDevelopment,
+.brandingPublicity{
+    border-bottom: 1px solid #999;
+    padding-bottom: 7px;
+    margin: 10px 0 15px;
+    font-size: 13px;
+}
+
+.webDevelopment i,
+.MobileAppDevelopment i,
+.brandingPublicity i,
+.maintainace i{
+    color: #3498db;
+}
+
+.maintainace{
+    font-size: 13px;
+}
+
+.generalNewsletter{
+    background-color: #3498db;
+    margin-top: 4rem;
+}
+
+.generalNewsletterchild{
+    padding: 23px 19px;
+}
+
+.generalNewsletterchild h6{
+    font-size: 12px;
+    color: #fff;
+}
+
+.generalNewsletterchild h3{
+   color: #fff;
+   padding-top: 10px;
+   padding-bottom: 25px;
+   font-size: 23px;
+   position: relative;
+}
+
+.active{
+    color: #3498db;
+}
+
+.generalNewsletterchild h3::after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 30%;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+}
+
+.generalNewsletterchild form input{
+   display: block;
+   width: 100%;
+   border: none;
+   outline: none;
+   margin-bottom: 30px;
+   color: #999;
+   padding: 10px 20px;
+}
+
+.generalNewsletterchild button{
+    outline: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #3498db;
+    background-color: #fff;
+    transition: ease-in-out .5s;
+}
+
+.generalNewsletterchild button:hover{
+    color: #fff;
+    background: #3498db;
+}
+
+.copyright{
+    text-align: center;
+    color: #212529 !important;
+}
+
+@media screen and (max-width:980px){
+    .webdesignflex{
+        display: block;
+    }
+
+    .searchsection input {
+        width: 100%;
+      }
+
+      .searchsectionchild {
+        padding-top: 40px;
+        padding-left: 29px;
+        padding-right: 29px;
+      }
+
+      .searchsectionchild i {
+        background-color: #3498db;
+        padding: 8px 35px;
+      }
+}

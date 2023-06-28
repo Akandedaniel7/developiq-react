@@ -1,0 +1,113 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+#footer {
+    background: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+  }
+  
+  #footer .credits {
+    font-size: 13px;
+    padding-top: 5px;
+    color: #222222;
+  }
+  
+  #footer .footer-links a {
+    color: #222222;
+    padding-left: 15px;
+  }
+  
+  #footer .footer-links a:first-child {
+    padding-left: 0;
+  }
+  
+  #footer .footer-links a:hover {
+    color: #3498db;
+  }
+
+  footer {
+    background: #3498db;
+  }
+
+  .generalNewsletter{
+    background-color: #3498db;
+    margin-top: 4rem;
+}
+
+.generalNewsletterchild{
+    padding: 23px 19px;
+}
+
+.generalNewsletterchild h6{
+    font-size: 12px;
+    color: #fff;
+}
+
+.generalNewsletterchild h3{
+   color: #fff;
+   padding-top: 10px;
+   padding-bottom: 25px;
+   font-size: 23px;
+   position: relative;
+}
+
+.active{
+    color: #3498db;
+}
+
+.generalNewsletterchild h3::after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 30%;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+}
+
+.generalNewsletterchild form input{
+   display: block;
+   width: 100%;
+   border: none;
+   outline: none;
+   margin-bottom: 30px;
+   color: #999;
+   padding: 10px 20px;
+}
+
+.generalNewsletterchild button{
+    outline: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #3498db;
+    background-color: #fff;
+    transition: ease-in-out .5s;
+}
+
+.generalNewsletterchild button:hover{
+    color: #fff;
+    background: #3498db;
+}
+
+.copyright{
+    text-align: center;
+    color: #212529 !important;
+}
+
+.linkAll li a{
+    color: #212529;
+}
+
+.linkAll li a:hover{
+    color: #6c757d;
+}
+
+.linkAll {
+    color: #212529 !important;
+}

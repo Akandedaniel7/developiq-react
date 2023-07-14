@@ -42,6 +42,12 @@
   input[type="number"] {
         -moz-appearance: textfield; /* Firefox */
   }
+
+  .serviceTypesDetails{
+    flex: 1 0 300px;
+    margin: 10px;
+  }
+  
   
   .formFlex_i select,
   .formFlex_ii select{

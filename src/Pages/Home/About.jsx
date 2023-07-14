@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './home.css';
 import '../../Components/General.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
@@ -34,7 +34,7 @@ const About = () => {
          Our team of experienced developers, designers, and strategists are dedicated to providing cutting-edge software solutions 
         tailored to our clients' unique needs.
           </p>
-          <a href="/about.html" className="btn-learn-more">Learn More</a>
+          <Link to="/About" className="btn-learn-more">Learn More</Link>
         </div>
       </div>
 

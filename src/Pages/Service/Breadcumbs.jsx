@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Components/General.css';
 
 const Breadcumbs = () => {
@@ -9,7 +10,7 @@ const Breadcumbs = () => {
 
       <h2>Services</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
+        <li><Link to="/">Home</Link></li>
         <li>Services</li>
       </ol>
 

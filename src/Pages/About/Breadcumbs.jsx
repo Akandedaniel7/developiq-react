@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Components/General.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
@@ -13,7 +13,7 @@ const Breadcumbs = () => {
 
       <h2>About</h2>
       <ol>
-        <li><a href="index.html">Home</a></li>
+        <li><Link to="/">Home</Link></li>
         <li>About</li>
       </ol>
 

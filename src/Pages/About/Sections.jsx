@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../Components/General.css';
+import { Link } from 'react-router-dom';
 import './about.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +16,7 @@ const Sections = () => {
         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div className="icon"><i className="bx bxl-dribbble"></i></div>
-            <h4 className="title"><a href="/about/blog.html">Blog</a></h4>
+            <h4 className="title"><Link to="/Blog">Blog</Link></h4>
             <p className="description">The realm of software solutions is explored in Code Chronicles.</p>
           </div>
         </div>
@@ -31,7 +32,7 @@ const Sections = () => {
         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="300">
             <div className="icon"><i className="bx bx-tachometer"></i></div>
-            <h4 className="title"><a href="/about/faq.html">FAQ</a></h4>
+            <h4 className="title"><Link to="/FAQ">FAQ</Link></h4>
             <p className="description">Stay up-to-date with industry news and innovations from DevelopIQ News.</p>
           </div>
         </div>
@@ -39,7 +40,7 @@ const Sections = () => {
         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="400">
             <div className="icon"><i className="bx bx-world"></i></div>
-            <h4 className="title"><a href="/about/carrer.html">Carrer</a></h4>
+            <h4 className="title"><Link to="/Carrer">Carrer</Link></h4>
             <p className="description">Join the DevelopIQ Team to shape the future of software development.</p>
           </div>
         </div>

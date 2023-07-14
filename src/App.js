@@ -23,9 +23,13 @@ import EcomerceApp from './Pages/Service/Mobile Application Development/Ecomerce
 import BusinessApp from './Pages/Service/Mobile Application Development/BusinessApp';
 import EntertainmentApp from './Pages/Service/Mobile Application Development/EntertainmentApp';
 import EducationalApp from './Pages/Service/Mobile Application Development/EducationalApp';
+import FAQ from './Pages/About/FAQ';
+import Blog from './Pages/About/Blog';
+import Carrer from './Pages/About/Carrer';
 
 function App() {
   return (
+    <div>
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
@@ -50,7 +54,20 @@ function App() {
         <Route path='/BusinessApp' element={<BusinessApp />} />
         <Route path='/MobileApp' element={<MobileApp />} />
         <Route path='/EcommerceApp' element={<EcomerceApp />} />
+        <Route path='/FAQ' element={<FAQ />} />
+        <Route path='/Blog' element={<Blog />} />
+        <Route path='/Carrer' element={<Carrer />} />
     </Routes>
+    {/* WhatsApp icon */}
+    <a
+    href="https://wa.me/2348100000000"
+    class="whatsapp_float"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa fa-whatsapp whatsapp-icon"></i>
+  </a>
+    </div>
   );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Components/Header/Navbar';
 import Hero from './Hero';
 import About from './About';
+import Counts from './Counts';
 import Service from './Service';
 import Testimonial from './Testimonial';
 import Team from '../../Pages/About/Team';
@@ -15,6 +16,7 @@ const Home = () => {
            <Header />
            <Hero />
            <About />
+           <Counts />
            <Service />
            <Testimonial />
            <Team />

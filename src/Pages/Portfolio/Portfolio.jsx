@@ -29,9 +29,9 @@ const Portfolio = () => {
     <Header />
     <Breadcumbs />
     <section id="portfolio" class="portfolio">
-    <div class="container">
+    <div className="container">
 
-      <div class="section-title" data-aos="fade-up">
+      <div className="section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
         <p>Advancing Innovation through Web, Desktop, and Mobile Application Development.</p>
       </div>
@@ -52,7 +52,7 @@ const Portfolio = () => {
   <div>
   {selectedCategory === 'All' && <AllProject />}
   {selectedCategory === 'Web Development' && <WebDevelopment />}
-  {selectedCategory === 'Mobile Apllication Development' && <MobileApplicationDevelopment />}
+  {selectedCategory === 'Mobile Application Development' && <MobileApplicationDevelopment />}
   {selectedCategory === 'Branding and Logo Design' && <BrandingandLogoDesign />}
   {selectedCategory === 'Maintenance' && <Maintenance />}
  

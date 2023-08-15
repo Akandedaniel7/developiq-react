@@ -7,7 +7,6 @@ import Maintenance from './Maintenance';
 const AllProject = () => {
   return(
     <div>
-    <h1>All Projects</h1>
     <WebDevelopment />
     <MobileApplicationDevelopment />
     <BrandingandLogoDesign />

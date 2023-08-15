@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../Components/General.css';
+import { Link } from 'react-router-dom';
 
 const Breadcumbs = () => {
   return (
@@ -9,7 +10,7 @@ const Breadcumbs = () => {
 
       <h2>Branding and Publicity</h2>
       <ol>
-        <li><a href="service.html">Service</a></li>
+        <li><Link to='/Service'>Service</Link></li>
         <li>Branding and Publicity</li>
       </ol>
 

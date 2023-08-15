@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
+import { Link } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 import custom from '../../../asstes/custom.jpeg';
 
@@ -14,7 +15,7 @@ const Custom = () => {
         <div class="d-flex justify-content-between align-items-center">
           <h2>Custom </h2>
           <ol>
-            <li><a href="index.html">Web Development</a></li>
+            <li><Link to="/WebDevelopment">Web Development</Link></li>
             <li>Custom </li>
           </ol>
         </div>
@@ -89,19 +90,19 @@ const Custom = () => {
             { /* web development  */ }
             <div class="webDevelopment active">
               <i class="bi bi-play-fill"></i>
-              <a href="/web development.html">Web Development</a>
+              <Link to="/WebDevelopmentl">Web Development</Link>
             </div>
   
             { /* Mobile App Development  */ }
             <div class="MobileAppDevelopment">
               <i class="bi bi-play-fill"></i>  
-              <a href="/mobile application.html">Mobile App Development</a>
+              <Link to="/MobileApplication">Mobile App Development</Link>
             </div>
   
             { /* branding & publicity  */ }
             <div class="brandingPublicity">
               <i class="bi bi-play-fill"></i>  
-              <a href="/">Branding $ Publicity</a>
+              <Link to="/BrandingandPublicity">Branding $ Publicity</Link>
             </div>
   
             { /* Maintainance */ }

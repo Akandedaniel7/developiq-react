@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
+import { Link } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 import publication from '../../../asstes/publication.jpeg';
 
@@ -14,7 +15,7 @@ const Publication = () => {
       <div class="d-flex justify-content-between align-items-center">
         <h2>Publication </h2>
         <ol>
-          <li><a href="/Branding and Publicity.html">Branding and Publicity</a></li>
+          <li><Link to="/BrandingandPublicity">Branding and Publicity</Link></li>
           <li>Publication</li>
         </ol>
       </div>
@@ -28,7 +29,7 @@ const Publication = () => {
       
       <div>
         <div class="ecommerceImg">
-            <img src={ publication } alt="" />
+            <img src={ publication } alt="publicationImage" />
         </div>
         <h2>
             <b>Our Publication Service</b>

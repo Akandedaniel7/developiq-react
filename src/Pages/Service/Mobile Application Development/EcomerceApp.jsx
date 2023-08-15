@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
+import { Link } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 import ecomerceapp from '../../../asstes/ecommerce app.jpg';
 import ecomerceapp2 from '../../../asstes/ecommerce app 2.jpeg';
@@ -15,7 +16,7 @@ const EcomerceApp = () => {
         <div class="d-flex justify-content-between align-items-center">
           <h2>E-commerce App </h2>
           <ol>
-            <li><a href="/mobile application.html">Mobile App Developemnt</a></li>
+            <li><Link to="/MobileApplication">Mobile App Developemnt</Link></li>
             <li> E-commerce App</li>
           </ol>
         </div>
@@ -76,7 +77,7 @@ const EcomerceApp = () => {
           </p>
   
           <div class="ecommerceImg">
-              <img src={ ecomerceapp2 } alt="" />
+              <img src={ ecomerceapp2 } alt="ecomerceapp2" />
           </div>
   
         </div>

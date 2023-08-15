@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../Components/Header/Navbar';
+import { Link } from 'react-router-dom'
 import './about.css';
 import Footer from '../../Components/Footer/Footer';
 
@@ -12,7 +13,7 @@ const FAQ = () => {
 
       <h2>FAQ</h2>
       <ol>
-        <li><a href="/about.html">About</a></li>
+        <li><Link to='/About'>About</Link></li>
         <li>FAQ</li>
       </ol>
 

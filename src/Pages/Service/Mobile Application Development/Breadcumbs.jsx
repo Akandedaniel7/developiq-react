@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../../Components/General.css';
 import '../service.css';
 
@@ -10,7 +11,7 @@ const Breadcumbs = () => {
 
       <h2>Mobile Application Development</h2>
       <ol>
-        <li><a href="service.html">Service</a></li>
+        <li><Link to="/Service">Service</Link></li>
         <li>Mobile Application Development</li>
       </ol>
 

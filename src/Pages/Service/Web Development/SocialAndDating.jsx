@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../../Components/Header/Navbar';
+import { Link } from 'react-router-dom';
 import '../service.css'
 import Footer from '../../../Components/Footer/Footer';
 import socialanddating from '../../../asstes/social and dating.jpeg';
@@ -14,7 +15,7 @@ const SocialAndDating = () => {
       <div class="d-flex justify-content-between align-items-center">
         <h2>Socials and Dating </h2>
         <ol>
-          <li><a href="/web development.html">Web Development</a></li>
+          <li><Link to="/WebDevelopment">Web Development</Link></li>
           <li>Socials and Dating</li>
         </ol>
       </div>
@@ -29,7 +30,7 @@ const SocialAndDating = () => {
       
       <div>
         <div class="ecommerceImg">
-            <img src={ socialanddating } alt="" />
+            <img src={ socialanddating } alt="SocialsandDatingImage" />
         </div>
         <h2>
            <b>What is an online dating site?</b> 
@@ -79,19 +80,19 @@ const SocialAndDating = () => {
          { /* web development  */ }
           <div class="webDevelopment active">
             <i class="bi bi-play-fill"></i>
-            <a href="/web development.html">Web Development</a>
+            <Link to="/WebDevelopment">Web Development</Link>
           </div>
 
          { /* Mobile App Development  */ }
           <div class="MobileAppdDevelopment">
             <i class="bi bi-play-fill"></i>  
-            <a href="/mobile application.html">Mobile App Development</a>
+            <Link to="/MobileApplication">Mobile App Development</Link>
           </div>
 
          { /* branding & publicity  */ }
           <div class="brandingPublicity">
             <i class="bi bi-play-fill"></i>  
-            <a href="/">Branding $ Publicity</a>
+            <Link to="/BrandingandPublicity">Branding $ Publicity</Link>
           </div>
 
          { /* Maintainance */ }

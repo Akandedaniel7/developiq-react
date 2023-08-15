@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
 import Footer from '../../../Components/Footer/Footer';
@@ -15,7 +16,7 @@ const Ecommerce = () => {
        <div class="d-flex justify-content-between align-items-center">
          <h2>Ecommerce </h2>
          <ol>
-           <li><a href="/web development.html">Web Development</a></li>
+           <li><Link to="/WebDevelopment">Web Development</Link></li>
            <li>Ecommerce</li>
          </ol>
        </div>
@@ -30,7 +31,7 @@ const Ecommerce = () => {
        
        <div>
          <div class="ecommerceImg">
-             <img src={ ecommerce } alt="" />
+             <img src={ ecommerce } alt="ecommeceImage" />
          </div>
          <h2>
              Boost Your Business with Our E-Commerce Services 
@@ -88,19 +89,19 @@ const Ecommerce = () => {
            {/* web development */}
            <div class="webDevelopment active">
              <i class="bi bi-play-fill"></i>
-             <a href="/web development.html">Web Development</a>
+             <Link to="/WebDevelopment">Web Development</Link>
            </div>
  
            {/* mobile app development */}
            <div class="MobileAppDevelopment">
              <i class="bi bi-play-fill"></i>  
-             <a href="/mobile application.html">Mobile App Development</a>
+             <Link to="/MobileApplication">Mobile App Development</Link>
            </div>
  
            {/*branding & publicity */}
            <div class="brandingPublicity">
              <i class="bi bi-play-fill"></i>  
-             <a href="/">Branding $ Publicity</a>
+             <Link to="/BrandingandPublicity">Branding $ Publicity</Link>
            </div>
  
            {/* Maintainance */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
 import Footer from '../../../Components/Footer/Footer';
@@ -14,7 +15,7 @@ const EntertainmentApp = () => {
         <div class="d-flex justify-content-between align-items-center">
           <h2>Entertainment </h2>
           <ol>
-            <li><a href="/mobile application.html">Mobile Application development</a></li>
+            <li><Link to="/MobileApplication">Mobile Application development</Link></li>
             <li>Entertainment </li>
           </ol>
         </div>
@@ -29,7 +30,7 @@ const EntertainmentApp = () => {
         
         <div>
           <div class="ecommerceImg">
-              <img src={ entertainmentapp } alt="" />
+              <img src={ entertainmentapp } alt="enterainmentappimage" />
           </div>
           <h2>
              <b>Want An Entertainment App? </b>

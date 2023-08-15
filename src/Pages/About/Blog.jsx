@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../Components/Header/Navbar';
+import { Link } from 'react-router-dom';
 import '../../Components/General.css';
 import '../About/about.css';
 import Footer from '../../Components/Footer/Footer';
@@ -18,7 +19,7 @@ const Blog = () => {
  
        <h2>Blog</h2>
        <ol>
-         <li><a href="index.html">About</a></li>
+         <li><Link to="/About">About</Link></li>
          <li>Blog</li>
        </ol>
  

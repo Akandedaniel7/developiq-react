@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
 import Footer from '../../../Components/Footer/Footer';
@@ -14,7 +15,7 @@ const EducationalApp = () => {
       <div class="d-flex justify-content-between align-items-center">
         <h2>Educational App </h2>
         <ol>
-          <li><a href="/mobile application.html">Mobile Appication Development</a></li>
+          <li><Link to="/MobileApplication">Mobile Appication Development</Link></li>
           <li>Educational App </li>
         </ol>
       </div>
@@ -29,7 +30,7 @@ const EducationalApp = () => {
       
       <div>
         <div class="ecommerceImg">
-            <img src={ educationalapp } alt="" />
+            <img src={ educationalapp } alt="educationalAppImage" />
         </div>
         <h2>
            <b>Create a unique identity for your school.</b> 

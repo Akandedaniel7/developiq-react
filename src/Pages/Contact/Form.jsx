@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../Components/General.css';
 import './contact.css';
-
+import { BiLogoFacebookCircle, BiLogoLinkedinSquare, BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
@@ -26,10 +26,10 @@ const Form = () => {
                our craft. Get In touch with us now.
             </p>
             <div className="social-links">
-              <a href="/" className="twitter"><i className="bi bi-twitter"></i></a>
-              <a href="/" className="facebook"><i className="bi bi-facebook"></i></a>
-              <a href="/" className="instagram"><i className="bi bi-instagram"></i></a>
-              <a href="/" className="linkedin"><i className="bi bi-linkedin"></i></a>
+              <a href="/" className="twitter"><i className="bi bi-twitter"><BiLogoTwitter size='24px'/></i></a>
+              <a href="/" className="facebook"><i className="bi bi-facebook"><BiLogoFacebookCircle size='24px'/></i></a>
+              <a href="/" className="instagram"><i className="bi bi-instagram"><BiLogoInstagram size='24px'/></i></a>
+              <a href="/" className="linkedin"><i className="bi bi-linkedin"><BiLogoLinkedinSquare size='24px'/></i></a>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Form = () => {
 
             <div>
               <i className="ri-phone-line"></i>
-              <p>+234 814 98261</p>
+              <p>+234 814 9823761</p>
             </div>
 
           </div>

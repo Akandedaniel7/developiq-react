@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../../Components/Header/Navbar';
 import '../service.css';
+import { Link } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 
 const MobileApp = () => {
@@ -13,7 +14,7 @@ const MobileApp = () => {
       <div class="d-flex justify-content-between align-items-center">
         <h2>Mobile App </h2>
         <ol>
-          <li><a href="/mobile application.html">Mobile Application Development</a></li>
+          <li><Link to="/MobileApplication">Mobile Application Development</Link></li>
           <li>Mobile App</li>
         </ol>
       </div>
@@ -119,7 +120,7 @@ const MobileApp = () => {
           { /* branding & publicity */ }
           <div class="brandingPublicity">
             <i class="bi bi-play-fill"></i>  
-            <a href="/">Branding $ Publicity</a>
+            <Link to="/BrandingandPublicity">Branding $ Publicity</Link>
           </div>
 
           { /* Maintainance*/ }

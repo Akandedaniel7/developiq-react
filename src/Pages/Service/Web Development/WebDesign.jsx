@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../../Components/Header/Navbar';
 import Footer from '../../../Components/Footer/Footer';
 import '../service.css';
@@ -13,7 +14,7 @@ const WebDesign = () => {
        <div class="d-flex justify-content-between align-items-center">
          <h2>Web design</h2>
          <ol>
-           <li><a href="/web development.html">Web Development</a></li>
+           <li><Link to="/WebDevelopment">Web Development</Link></li>
            <li>Web Design </li>
          </ol>
        </div>
@@ -78,19 +79,19 @@ const WebDesign = () => {
 
            <div class="webDevelopment active">
              <i class="bi bi-play-fill"></i>
-             <a href="/web development.html">Web Development</a>
+             <Link to="/WebDevelopment">Web Development</Link>
            </div>
  
 
            <div class="MobileAppdDevelopment">
              <i class="bi bi-play-fill"></i>  
-             <a href="/mobile application.html">Mobile App Development</a>
+             <Link to="/MobileApplication">Mobile App Development</Link>
            </div>
            
 
            <div class="brandingPublicity">
              <i class="bi bi-play-fill"></i>  
-             <a href="/Branding and Publicity.html">Branding $ Publicity</a>
+             <Link to="/BrandingandPublicity">Branding $ Publicity</Link>
            </div>
  
            <div class="maintainace">

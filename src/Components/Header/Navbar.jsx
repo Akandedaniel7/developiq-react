@@ -2,14 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../General.css';
 import './navbar.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
 
 
 const Header = () => {
-  // const [isOpen, setOpen] = useState(false);
 
     return(
         <header id="header" className="fixed-top d-flex align-items-center">
@@ -46,7 +44,7 @@ const Header = () => {
           <NavLink className="getstarted scrollto" to="/Quote">REQUEST A QUOTE</NavLink>
           </li>
         </ul>
-        <i className="bi bi-list mobile-nav-toggle"></i>
+        {/* <i className="bi bi-list mobile-nav-toggle"></i>*/}
       </nav>
 
     </div>
@@ -55,3 +53,5 @@ const Header = () => {
 }
 
 export default Header;
+
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import '../../Components/General.css';
 import './home.css';
 import Slider from 'react-slick';
@@ -10,11 +10,25 @@ import elizabeth from '../../asstes/Elizabeth.jpg';
 
 const Testimonial = () => {
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: isMobile ? 1 : 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1000,

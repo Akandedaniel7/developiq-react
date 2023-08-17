@@ -24,8 +24,10 @@ import BusinessApp from './Pages/Service/Mobile Application Development/Business
 import EntertainmentApp from './Pages/Service/Mobile Application Development/EntertainmentApp';
 import EducationalApp from './Pages/Service/Mobile Application Development/EducationalApp';
 import FAQ from './Pages/About/FAQ';
+import Error from './Pages/Error/Error';
 import Blog from './Pages/About/Blog';
 import Carrer from './Pages/About/Carrer';
+import News from './Pages/About/News'
 
 function App() {
   return (
@@ -57,6 +59,8 @@ function App() {
         <Route path='/FAQ' element={<FAQ />} />
         <Route path='/Blog' element={<Blog />} />
         <Route path='/Carrer' element={<Carrer />} />
+        <Route path='/Error' element={<Error />} />
+        <Route path='/News' element={<News />} />
     </Routes>
     {/* WhatsApp icon */}
     <a

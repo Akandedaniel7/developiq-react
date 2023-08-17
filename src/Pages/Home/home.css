@@ -374,3 +374,33 @@ a{
     max-width: 100%;
   }
 }
+
+
+/* Add your custom styles for the dots */
+.testimonials-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.testimonials-slider .slick-dots li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.testimonials-slider .slick-dots button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4.9px;
+  margin-left: 5.9px;
+}
+
+.testimonials-slider .slick-dots button.slick-active {
+  background-color: red; /* Active dot color */
+}

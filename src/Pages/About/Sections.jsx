@@ -2,7 +2,6 @@ import React from 'react';
 import '../../Components/General.css';
 import { Link } from 'react-router-dom';
 import './about.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
@@ -24,7 +23,7 @@ const Sections = () => {
         <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div className="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div className="icon"><i className="bx bx-file"></i></div>
-            <h4 className="title"><a href="/about/news.html">News</a></h4>
+            <h4 className="title"><a href="/News">News</a></h4>
             <p className="description">DevelopIQ offers news and business updates from the cutting edge of technology.</p>
           </div>
         </div>

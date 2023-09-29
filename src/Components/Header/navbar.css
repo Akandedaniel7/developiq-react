@@ -1,19 +1,19 @@
 /*--------------------------------------------------------------
-# Header
+# headerdesktop
 --------------------------------------------------------------*/
-#header {
+#headerdesktop {
     z-index: 997;
     transition: all 0.5s;
     padding: 22px 0;
     background: #fff;
   }
   
-  #header.header-scrolled {
+  #headerdesktop.headerdesktop-scrolled {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     padding: 12px 0;
   }
   
-  #header .logo h1 {
+  #headerdesktop .logo h1 {
     font-size: 30px;
     margin: 0;
     padding: 0;
@@ -22,13 +22,13 @@
     letter-spacing: 1px;
   }
   
-  #header .logo h1 a,
-  #header .logo h1 a:hover {
+  #headerdesktop .logo h1 a,
+  #headerdesktop .logo h1 a:hover {
     color: #222222;
     text-decoration: none;
   }
   
-  #header .logo img {
+  #headerdesktop .logo img {
     padding: 0;
     margin: 0;
     max-height: 40px;
@@ -40,7 +40,7 @@
   /**
   * Desktop Navigation 
   */
-  .navbar {
+  /* .navbar {
     padding: 0;
   }
   
@@ -162,10 +162,16 @@
     }
   }
   
-  /**
-  * Mobile Navigation 
+  @media (max-width: 991px) {
+    #headerdesktop{
+      display: none !important;
+    }
+  } */
+
+ 
+  /* Mobile Navigation 
   */
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle {
     color: #222222;
     font-size: 28px;
     cursor: pointer;
@@ -270,7 +276,7 @@
   
   .navbar-mobile .dropdown>.dropdown-active {
     display: block;
-  }
+  } */
 
   .logo-span{
     color: #3498db;

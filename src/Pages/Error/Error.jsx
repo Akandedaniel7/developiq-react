@@ -1,51 +1,70 @@
-import React from 'react';
-import Header from '../../Components/Header/Navbar';
+import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import Home from '../Home/Home';
 import '../../Components/General.css';
-import Footer from '../../Components/Footer/Footer';
-import { Link } from 'react-router-dom';
-import error404 from '../../asstes/404.png';
-import oops from '../../asstes/oops.png';
-import './error.css';
+import "./error.css";
+import openIcon from '../../asstes/Icons/icons8-menu-24.png';
+import closeIcon from '../../asstes/Icons/icons8-close-24.png';
 
-const error = () => {
+const Error = () => {
+  const [active, setActive] = useState("nav__menu");
+  const [toggleIcon, setToggleIcon] = useState('nav__toggler');
+
+  const navToggle = () => {
+    active === "nav__menu"
+      ? setActive("nav__menu nav__active")
+      : setActive("nav__menu");
+
+      //ToggleIcon
+
+      toggleIcon === 'nav__toggler' ? setToggleIcon('nav__toggler toggle') : setToggleIcon('nav__toggler')
+  };
+
   return (
     <div>
-    <Header />
-    <div class="breadcrumbs-1 d-flex align-items-center">
-    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+    <header id='header' className="fixed-top d-flex align-items-center">
+    <div className="container d-flex align-items-center justify-content-between ">
+    <div className="logo">
+      <h1><NavLink to="/">Develop<span className="logo-span">IQ</span></NavLink></h1>
+       
+      </div>
+      <nav id='navbar' className="navbar">
+        <ul className={active}>
+        <li>
+        <NavLink to="/" className="nav-link scrollto ">Home</NavLink>
+        </li>
 
-      <h2>404 Not Found</h2>
-      <ol>
-        <li><Link to='/'>Home</Link></li>
-        <li>404 Page</li>
-      </ol>
+        <li>
+        <NavLink className="nav-link scrollto" to="/About">About</NavLink>
+        </li>
 
+        <li>
+        <NavLink className="nav-link scrollto" to="/Service">Service</NavLink>
+        </li>
+
+        <li>
+        <NavLink className="nav-link scrollto " to="/Portfolio">Portfolio</NavLink>
+        </li>
+
+        <li>
+        <NavLink className="nav-link scrollto" to="/Contact">Contact</NavLink>
+        </li>
+
+        <li>
+        <NavLink className="getstarted scrollto" to="/Quote">REQUEST A QUOTE</NavLink>
+        </li>
+        </ul>
+        <div onClick={navToggle} className={toggleIcon}>
+        <img src={toggleIcon === 'nav__toggler' ? openIcon : closeIcon} alt="Toggle Icon" />
+      </div>
+      
+      </nav>
+      </div>
+      </header>
+
+      <Home />
     </div>
-  </div>
+  );
+};
 
-  <main id="main">
-    <section id="404page">
-        <div class="container">
-            <div class="pageflex">
-                <div class="pageflex-i">
-                  <img src={error404 } alt="404" />
-                </div>
-            
-                <div class="pagefle-ii">
-                   <img src={ oops } alt="Oops!" />
-                   <h3>YOU'RE LOST...</h3>
-                   <p>THE PAGE YOU ARE LOOKING FOR MIGHT HAVE BEEN MOVED, RENAMED, OR MIGHT NEVER EXISTED.</p>
-                   <Link to="/">Back Home</Link>
-                </div>
-            </div>
-        </div>
-    </section>
-  </main>
-  <Footer />
-    </div>
-  )
-}
-
-export default error
-
-
+export default Error;

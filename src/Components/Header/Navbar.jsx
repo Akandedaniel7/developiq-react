@@ -10,8 +10,8 @@ import 'boxicons/css/boxicons.min.css';
 const Header = () => {
 
     return(
-        <header id="header" className="fixed-top d-flex align-items-center">
-    <div className="container d-flex align-items-center justify-content-between">
+        <header id="headerdesktop" className="fixed-top d-flex align-items-center nav-desktop">
+    <div className="container d-flex align-items-center justify-content-between ">
 
       <div className="logo">
       <h1><NavLink to="/">Develop<span className="logo-span">IQ</span></NavLink></h1>

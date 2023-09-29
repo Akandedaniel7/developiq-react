@@ -27,9 +27,11 @@ import FAQ from './Pages/About/FAQ';
 import Error from './Pages/Error/Error';
 import Blog from './Pages/About/Blog';
 import Carrer from './Pages/About/Carrer';
-import News from './Pages/About/News'
+import News from './Pages/About/News';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-function App() {
+const App = () => {
   return (
     <div>
     <Routes>

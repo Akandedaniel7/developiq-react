@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../../Components/Header/Navbar';
-import MobileNav from '../../Components/Header/MobileNav';
 import Hero from './Hero';
 import About from './About';
 import Counts from './Counts';
@@ -14,6 +13,7 @@ import Footer from '../../Components/Footer/Footer';
 const Home = () => {
     return(
         <div>
+        <Header />
            <Hero />
            <About />
            <Counts />

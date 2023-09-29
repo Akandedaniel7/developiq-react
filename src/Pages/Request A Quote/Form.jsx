@@ -61,60 +61,6 @@ const Form = () => {
       <label for="name">Details</label>
       <textarea name="text" id="" cols="10" rows="4" placeholder="Project Description"></textarea>
      </div>
-
-  
-     <div className="serviceTypes">
-      <h4>Select Service Type</h4>
-      <div className="serviceDetails">
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Web Design</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Web Design</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Software Design</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Mobile App</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for=""> Graphics/Animation</label>
-      </div>
- 
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for=""> Digital Marketting</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Game Design</label>
-      </div>
-
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Maintanace</label>
-      </div>
- 
-      <div className="serviceTypesDetails">
-        <input type="checkbox" name="" id="" />
-        <label for="">Consulting</label>
-      </div>
-      </div>
-     </div>
-     
-
        <div className="form1Flex">
 
         <div className="formFlex_i">
@@ -157,7 +103,7 @@ const Form = () => {
       <div className="browerseFile ">
         <label for="fileInput">Select a file:</label>
         <input type="file" id="fileInput" name="fileInput" className="file-input" />
-        <p>Only doc, docx, pdf, rtf, txt, zip, rar files are allowed</p>
+        {/* <p>Only doc, docx, pdf, rtf, txt, zip, rar files are allowed</p>*/}
       </div>
       
       <div className="QuoteBtn">

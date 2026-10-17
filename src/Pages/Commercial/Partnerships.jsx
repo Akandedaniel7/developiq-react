@@ -1,84 +1,65 @@
 import React from 'react';
 import Header from '../../Components/Header/Navbar';
 import Footer from '../../Components/Footer/Footer';
-import '../Home/commercial.css';
+import '../../Styles/premium.css';
 
-const categories = [
-  {
-    number: '01 / ENGINEERING',
-    title: 'Software development collaboration',
-    description: 'Engineering delivery, product development and integration work with businesses building or expanding technology products.'
-  },
-  {
-    number: '02 / CODE & DOCUMENTATION',
-    title: 'Eligible proprietary assets',
-    description: 'Exploratory licensing discussions covering company-owned repositories, technical documentation and development histories where rights and provenance can be verified.'
-  },
-  {
-    number: '03 / AI EVALUATION',
-    title: 'Agent training and evaluation',
-    description: 'Scoping conversations about realistic software workflows and test environments for AI evaluation, where requirements, permissions and commercial terms align.'
-  }
+const types=[
+  {icon:'◇',num:'01 / DELIVERY',title:'Engineering collaboration',text:'Product development, technical implementation and integrations for organizations building digital tools and services.'},
+  {icon:'▣',num:'02 / ASSET LICENSING',title:'Eligible engineering assets',text:'Structured discussions about permitted, company-owned codebases, technical documentation and development histories after rights verification.'},
+  {icon:'↗',num:'03 / AI & EVALUATION',title:'AI research and evaluation',text:'Potential collaboration on software workflows or controlled test environments, where access, consent and commercial use are appropriately agreed.'}
 ];
 
-const Partnerships = () => (
-  <>
-    <Header />
-    <main className="commercial-page">
-      <section className="commercial-page-hero">
-        <div className="container">
-          <span className="commercial-eyebrow">ENGINEERING & AI PARTNERSHIPS</span>
-          <h1>Technical collaboration built on real engineering work.</h1>
-          <p>We partner with technology companies and research teams to explore software engineering services, permitted asset licensing and clearly scoped AI evaluation opportunities.</p>
-          <a className="commercial-primary-btn" href="mailto:developiq01@gmail.com?subject=Engineering%20and%20AI%20Partnership%20Inquiry">Discuss a partnership →</a>
+const Partnerships=()=>(
+  <div className="di-site">
+    <Header/>
+    <main className="di-page">
+      <section className="di-page-hero">
+        <div className="di-container">
+          <span className="di-eyebrow">ENGINEERING & TECHNOLOGY PARTNERSHIPS</span>
+          <h1>Meaningful collaboration starts with shared clarity.</h1>
+          <p>Develop-IQ works with technology teams and prospective research partners on software engineering, eligible technology assets and carefully scoped AI-related collaborations.</p>
+          <a className="di-button di-button--primary" href="mailto:developiq01@gmail.com?subject=Technology%20Partnership%20Inquiry">Discuss a partnership <span className="di-arrow" aria-hidden="true">↗</span></a>
         </div>
       </section>
-
-      <section className="commercial-page-section">
-        <div className="container">
-          <span className="commercial-eyebrow">WAYS TO WORK WITH US</span>
-          <h2>From software execution to technical assets.</h2>
-          <p className="section-intro">Develop-IQ is a six-person software development team based in Nigeria. Partnership eligibility, technical scope and materials available for review are confirmed directly with each prospective partner.</p>
-          <div className="commercial-detail-grid">
-            {categories.map((category) => (
-              <article className="commercial-detail-card" key={category.number}>
-                <span className="number">{category.number}</span>
-                <h3>{category.title}</h3>
-                <p>{category.description}</p>
-              </article>
-            ))}
+      <section className="di-section">
+        <div className="di-container">
+          <div className="di-section-intro"><span className="di-eyebrow">COLLABORATION MODELS</span><h2>Engineering work. New possibilities.</h2><p>We evaluate each opportunity based on relevance, available resources, clear ownership and the needs of the partner.</p></div>
+          <div className="di-cards">
+            {types.map(p=><article className="di-card" key={p.num}><span className="di-card-icon" aria-hidden="true">{p.icon}</span><span className="di-card-counter">{p.num}</span><h3>{p.title}</h3><p>{p.text}</p></article>)}
           </div>
         </div>
       </section>
-
-      <section className="commercial-page-section alt">
-        <div className="container">
-          <span className="commercial-eyebrow">SAFE BY DESIGN</span>
-          <h2>Controlled disclosure. Clear rights.</h2>
-          <p className="section-intro">We begin with a non-confidential description of potential assets and the intended use. Detailed samples, repository access or engineering records are only considered after suitable confidentiality, security, ownership and licensing checks.</p>
-          <div className="commercial-steps">
-            <div className="commercial-step"><strong>STEP 01</strong><h3>Initial fit assessment</h3><p>Discuss the requested assets, the use case and basic eligibility criteria.</p></div>
-            <div className="commercial-step"><strong>STEP 02</strong><h3>Rights and scope review</h3><p>Check code provenance, client obligations, applicable third-party licenses and proposed usage rights.</p></div>
-            <div className="commercial-step"><strong>STEP 03</strong><h3>Agreed collaboration</h3><p>Proceed only under written terms that define access, permitted use, compensation and responsibilities.</p></div>
+      <section className="di-section di-section--muted">
+        <div className="di-container di-split">
+          <div>
+            <span className="di-eyebrow">RESPONSIBLE BY DESIGN</span>
+            <h2>A clear approach to data and rights.</h2>
+            <p>We begin with non-confidential asset descriptions and a discussion of the use case. We do not share private source code, customer information or internal records without appropriate permissions and contractual safeguards.</p>
+            <ul className="di-simple-list">
+              <li>Provenance and ownership review</li>
+              <li>Defined permitted uses and confidentiality terms</li>
+              <li>Controlled technical review when appropriate</li>
+            </ul>
           </div>
-        </div>
-      </section>
-
-      <section className="commercial-page-section">
-        <div className="container">
-          <div className="commercial-cta">
-            <div>
-              <h2>Explore a partnership with Develop-IQ.</h2>
-              <p>Tell us what your team is building or evaluating. We can start with a high-level, non-confidential discussion.</p>
+          <div className="di-panel-visual" aria-hidden="true">
+            <div className="di-panel-top">PROVENANCE / PERMISSIONS / SCOPE</div>
+            <div className="di-panel-code">
+              <div><strong>01.</strong> Establish eligibility</div>
+              <div><strong>02.</strong> Review permitted rights</div>
+              <div><strong>03.</strong> Agree scope and use</div>
+              <div><strong>04.</strong> Collaborate responsibly</div>
             </div>
-            <a className="commercial-primary-btn" href="mailto:developiq01@gmail.com?subject=Technology%20Partnership%20Inquiry">Contact our team →</a>
           </div>
-          <p className="commercial-small-print">No client-owned source code, private repositories, personal data or other protected records are made available without appropriate rights and an agreed process.</p>
         </div>
+      </section>
+      <section className="di-cta-wrap" style={{paddingTop:90}}>
+        <div className="di-container"><div className="di-cta">
+          <div><span className="di-eyebrow di-eyebrow--light">PARTNER WITH DEVELOP-IQ</span><h2>Let's explore the fit.</h2><p>Start with a short note about the use case and the kind of technical collaboration you have in mind.</p></div>
+          <a className="di-button di-button--white" href="mailto:developiq01@gmail.com?subject=Engineering%20Partnership%20Inquiry">Get in touch <span className="di-arrow" aria-hidden="true">↗</span></a>
+        </div></div>
       </section>
     </main>
-    <Footer />
-  </>
+    <Footer/>
+  </div>
 );
-
 export default Partnerships;

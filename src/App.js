@@ -28,6 +28,8 @@ import Error from './Pages/Error/Error';
 import Blog from './Pages/About/Blog';
 import Carrer from './Pages/About/Carrer';
 import News from './Pages/About/News';
+import Licensing from './Pages/Commercial/Licensing';
+import Partnerships from './Pages/Commercial/Partnerships';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -39,6 +41,8 @@ const App = () => {
         <Route path='/About' element={<About />} />
         <Route path='/Service' element={<Service />} />
         <Route path='/Portfolio' element={<Portfolio />} />
+        <Route path='/SoftwareLicensing' element={<Licensing />} />
+        <Route path='/TechnologyPartnerships' element={<Partnerships />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Quote' element={<Quote />} /> 
         <Route path='/WebDevelopment' element={<WebDevelopment />} />

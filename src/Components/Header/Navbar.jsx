@@ -1,72 +1,58 @@
-import React, { useState } from "react";
-import { NavLink } from 'react-router-dom';
-import '../../Components/General.css';
-import './navbar.css';
-import openIcon from '../../asstes/Icons/icons8-menu-24.png';
-import closeIcon from '../../asstes/Icons/icons8-close-24.png';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import '../../Styles/premium.css';
+
+const navItems = [
+  { to: '/Service', label: 'Services' },
+  { to: '/SoftwareLicensing', label: 'Licensing' },
+  { to: '/Portfolio', label: 'Our Work' },
+  { to: '/TechnologyPartnerships', label: 'Partnerships' },
+  { to: '/About', label: 'About' }
+];
+
+export const Brand = () => (
+  <NavLink to="/" className="di-brand" aria-label="Develop-IQ Technologies home">
+    <span className="di-brand-mark" aria-hidden="true"><span /></span>
+    <span className="di-brand-name">develop<span style={{color:'#347fed'}}>-iq</span><em>.</em></span>
+  </NavLink>
+);
 
 const Navbar = () => {
-  const [active, setActive] = useState("nav__menu");
-  const [toggleIcon, setToggleIcon] = useState('nav__toggler');
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
 
-  const navToggle = () => {
-    active === "nav__menu"
-      ? setActive("nav__menu nav__active")
-      : setActive("nav__menu");
-
-      //ToggleIcon
-
-      toggleIcon === 'nav__toggler' ? setToggleIcon('nav__toggler toggle') : setToggleIcon('nav__toggler')
-  };
+  useEffect(() => { setOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    const onKeyDown = (event) => { if (event.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   return (
-    <div>
-    <header id='header' className="fixed-top d-flex align-items-center">
-    <div className="container d-flex align-items-center justify-content-between ">
-    <div className="logo">
-      <h1><NavLink to="/">Develop-<span className="logo-span">IQ</span></NavLink></h1>
-       
+    <header className="di-header">
+      <div className="di-container di-header-inner">
+        <Brand />
+        <nav className="di-desktop-nav" aria-label="Main navigation">
+          {navItems.map(({to, label}) => (
+            <NavLink key={to} to={to} className={({isActive}) => 'di-nav-link' + (isActive ? ' active' : '')}>{label}</NavLink>
+          ))}
+        </nav>
+        <NavLink className="di-nav-cta" to="/Contact">Start a conversation <span aria-hidden="true">↗</span></NavLink>
+        <button type="button" className="di-mobile-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-expanded={open} aria-controls="di-mobile-navigation" onClick={() => setOpen(!open)}>
+          {open
+            ? <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+            : <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>}
+        </button>
+        <nav id="di-mobile-navigation" className={'di-mobile-menu' + (open ? ' open' : '')}
+          aria-label="Mobile navigation" aria-hidden={!open}>
+          <NavLink to="/" tabIndex={open ? 0 : -1}>Home</NavLink>
+          {navItems.map(({to,label}) => <NavLink key={to} to={to} tabIndex={open ? 0 : -1}>{label}</NavLink>)}
+          <NavLink to="/Contact" className="di-mobile-cta" tabIndex={open ? 0 : -1}>Start a conversation ↗</NavLink>
+        </nav>
       </div>
-      <nav id='navbar' className="navbar">
-        <ul className={active}>
-        <li>
-        <NavLink to="/" className="nav-link scrollto ">Home</NavLink>
-        </li>
-
-        <li>
-        <NavLink className="nav-link scrollto" to="/About">About</NavLink>
-        </li>
-
-        <li>
-        <NavLink className="nav-link scrollto" to="/Service">Service</NavLink>
-        </li>
-
-        <li>
-        <NavLink className="nav-link scrollto " to="/Portfolio">Portfolio</NavLink>
-        </li>
-
-        <li><NavLink className="nav-link scrollto" to="/SoftwareLicensing">Software Licensing</NavLink></li>
-        <li><NavLink className="nav-link scrollto" to="/TechnologyPartnerships">Partnerships</NavLink></li>
-        <li>
-        <NavLink className="nav-link scrollto" to="/Contact">Contact</NavLink>
-        </li>
-
-        <li>
-        <NavLink className="getstarted scrollto" to="/Quote">GET A QUOTE</NavLink>
-        </li>
-        </ul>
-        <div onClick={navToggle} className={toggleIcon}>
-        <img src={toggleIcon === 'nav__toggler' ? openIcon : closeIcon} alt="Toggle Icon" />
-      </div>
-      
-      </nav>
-      </div>
-      </header>
-    </div>
+    </header>
   );
 };
 
 export default Navbar;
-
-
-

@@ -1,39 +1,33 @@
 import React from 'react';
-// import { link } from 'react-router-dom';
-import '../../Components/General.css';
+import { Link } from 'react-router-dom';
 import './home.css';
+import './commercial.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'boxicons/css/boxicons.min.css';
-import heroimg from '../../asstes/images/hero-img.png';
-
-const Hero = () => {
-  return (
-    <div>
-    <section id="hero" className="d-flex align-items-center">
-
+const Hero = () => (
+  <section id="hero" className="home-commercial-hero d-flex align-items-center">
     <div className="container">
-      <div className="row">
-        <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">A Software company that's light-years ahead</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We build Web, Desktop and Mobile Applications for startups and SMEs </h2>
-          <div data-aos="fade-up" data-aos-delay="800">
-            <a href="#about" className="btn-get-started scrollto">Get Started</a>
-            <link to ></link>
+      <div className="row align-items-center">
+        <div className="col-lg-7">
+          <span className="commercial-eyebrow">SOFTWARE ENGINEERING · TECHNOLOGY ASSETS</span>
+          <h1>We build, license and deliver software.</h1>
+          <p className="commercial-hero-subtitle">Custom software engineering for ambitious businesses. Explore white-label opportunities, selected technology assets and technical partnerships with Develop-IQ Technologies.</p>
+          <div className="commercial-hero-actions">
+            <Link className="commercial-primary-btn" to="/SoftwareLicensing">Explore software opportunities →</Link>
+            <Link className="commercial-secondary-btn" to="/Service">Our development services</Link>
           </div>
+          <p className="commercial-hero-note">Based in Nigeria · Web, mobile and business applications · Commercial inquiries welcome</p>
         </div>
-        <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img src={heroimg} className="img-fluid animated" alt="Hero" />
+        <div className="col-lg-5">
+          <div className="commercial-hero-visual" aria-label="Develop-IQ technology services">
+            <div className="commercial-window-top"><i/><i/><i/><span>DEVELOP-IQ / ENGINEERING</span></div>
+            <div className="commercial-visual-label">BUILT FOR REAL BUSINESS</div>
+            <div className="commercial-visual-heading">From working code<br/>to commercial value.</div>
+            <div className="commercial-tech-row"><span>↗ Software delivery</span><span>↗ White-label licensing</span><span>↗ Asset acquisition</span><span>↗ AI partnerships</span></div>
+          </div>
         </div>
       </div>
     </div>
-
-   
-
   </section>
-    </div>
-  )
-}
+);
 
 export default Hero;

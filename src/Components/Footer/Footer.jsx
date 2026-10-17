@@ -1,70 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './footer.css';
 import '../General.css';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'boxicons/css/boxicons.min.css';
-
-const Footer = () => {
-  return (
-    <div>
-    <footer class="w-100 py-4 flex-shrink-0">
-    <div class="container py-4">
-      
-        <div class="row gy-4 gx-5">
-            <div class="col-lg-4 col-md-6 linkAll-i linkAll">
-                <h5 class="h1 text-white ">DevelopIQ</h5>
-                <p class="small text-muted logoAll-group">Software Website...</p>
-                <p class="small text-muted mb-0 linkAll">DevelopIQ is a Nigeria IT Brand of excellence that offers High quality and easy to use bespoke website,
-                   software, digital marketing, branding, IT and associated services at affordable prices for business growth worldwide and profit
-                    traction.</p>
-            </div>
-          
-            <div class="col-lg-2 col-md-6">
-                <h5 class="text-white mb-3">Useful Links</h5>
-                <ul class="list-unstyled text-muted linkAll">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Service">Services</Link></li>
-                    <li><Link to="/Portfolio">Portfolio</Link></li>
-                    <li><Link to="/Contact">Contact</Link></li>
-                    <li><Link to="/Quote">Request  A Quote</Link></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-6 ">
-              <h5 class="text-white mb-3">Services</h5>
-              <ul class="list-unstyled text-muted linkAll">
-                  <li><a href="/service/web design.html">Web Design</a></li>
-                  <li><a href="/web development.html">Web Appilcation</a></li>
-                  <li><a href="/service/Graphics Design.html">Graphics Design</a></li>
-                  <li><a href="/Plugin Development.html">Plugin Development</a></li>
-                  <li><a href="/Marketing SEO.html">Marketing SEO</a></li>
-                  <li><a href="/Policy.html">Policy</a></li>
-                  <li><a href="/Terms and Condition.html">Terms</a></li>
-                
-              </ul>
-          </div>
-            
-            <div class="col-lg-4 col-md-6 linkAll">
-                <h5 class="text-white mb-3">Newsletter</h5>
-                <p class="small text-muted linkAll">Subscribe to get Latest Technology and Business News, Offer and connect With Us.</p>
-                <form action="#">
-                    <div class="input-group mb-3">
-                        <input class="form-control" type="text" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                        <button class="btn btn-primary buttonAll" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </form>
-            </div>
+const Footer = () => (
+  <footer className="w-100 py-4 flex-shrink-0">
+    <div className="container py-4">
+      <div className="row gy-4 gx-5">
+        <div className="col-lg-5 col-md-6 linkAll">
+          <h5 className="h3 text-white">Develop-IQ Technologies</h5>
+          <p className="small text-muted">Custom software engineering, eligible software asset licensing and technology partnerships.</p>
+          <p className="small text-muted">Nigeria · Working with businesses worldwide</p>
         </div>
+        <div className="col-lg-3 col-md-6 linkAll">
+          <h5 className="text-white mb-3">Explore</h5>
+          <ul className="list-unstyled">
+            <li><Link to="/Service">Development Services</Link></li>
+            <li><Link to="/Portfolio">Selected Work</Link></li>
+            <li><Link to="/SoftwareLicensing">Software Licensing</Link></li>
+            <li><Link to="/TechnologyPartnerships">Technology Partnerships</Link></li>
+            <li><Link to="/About">About</Link></li>
+          </ul>
+        </div>
+        <div className="col-lg-4 col-md-12 linkAll">
+          <h5 className="text-white mb-3">Let's talk</h5>
+          <p className="small text-muted">Have a software requirement or want to discuss a commercial partnership?</p>
+          <a href="mailto:developiq01@gmail.com?subject=Develop-IQ%20Inquiry">developiq01@gmail.com</a>
+          <div className="mt-3"><Link to="/Contact">Contact us →</Link></div>
+        </div>
+      </div>
     </div>
-     <div class="copyright">
-      Copyright © 2023 DevelopIQ. All rights reserved  
-    </div>
-</footer>
-    </div>
-  )
-}
-
-export default Footer
+    <div className="copyright">Copyright © {new Date().getFullYear()} Develop-IQ Technologies. All rights reserved.</div>
+  </footer>
+);
+export default Footer;

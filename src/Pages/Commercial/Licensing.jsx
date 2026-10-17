@@ -1,83 +1,57 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../Components/Header/Navbar';
 import Footer from '../../Components/Footer/Footer';
-import '../Home/commercial.css';
+import '../../Styles/premium.css';
 
-const offers = [
-  {
-    number: '01 / LICENSE',
-    title: 'White-label software',
-    description: 'License an eligible ready-built solution for use under your own brand. Scope, deployment rights, support and any permitted resale are defined in the agreement.'
-  },
-  {
-    number: '02 / TRANSFER',
-    title: 'Software asset acquisition',
-    description: 'Discuss the acquisition of selected software assets, including source code and documented transferable rights, where ownership and product availability have been verified.'
-  },
-  {
-    number: '03 / DELIVER',
-    title: 'Deployment and customization',
-    description: 'Arrange implementation, hosting setup, integrations or feature changes with our engineering team as a separate, agreed engagement.'
-  }
+const options=[
+  {icon:'▣',num:'01 / WHITE LABEL',title:'License under your brand',text:'Explore independently owned software that may be adapted to your brand and deployment needs, subject to availability and agreed terms.'},
+  {icon:'◇',num:'02 / ACQUISITION',title:'Acquire a software asset',text:'Discuss selected codebases and software rights for complete acquisition where ownership, transferability and scope can be established.'},
+  {icon:'↗',num:'03 / IMPLEMENTATION',title:'Deploy with our help',text:'Engage the engineering team for implementation, customization, integrations or a separately scoped deployment.'}
 ];
 
-const Licensing = () => (
-  <>
-    <Header />
-    <main className="commercial-page">
-      <section className="commercial-page-hero">
-        <div className="container">
-          <span className="commercial-eyebrow">SOFTWARE ASSETS & LICENSING</span>
-          <h1>Buy the head start. Build what comes next.</h1>
-          <p>Develop-IQ works with agencies, entrepreneurs and companies exploring ready-built technology, white-label licensing and full software acquisitions. Available assets are shared through a qualified inquiry process.</p>
-          <a className="commercial-primary-btn" href="mailto:developiq01@gmail.com?subject=Software%20Licensing%20Inquiry">Request available software →</a>
-        </div>
-      </section>
-
-      <section className="commercial-page-section">
-        <div className="container">
-          <span className="commercial-eyebrow">COMMERCIAL OPTIONS</span>
-          <h2>A flexible path to software ownership or use.</h2>
-          <p className="section-intro">Every product and deal is assessed individually. We do not list client-owned systems as saleable assets, and a demo is not a promise of resale rights.</p>
-          <div className="commercial-detail-grid">
-            {offers.map((offer) => (
-              <article className="commercial-detail-card" key={offer.number}>
-                <span className="number">{offer.number}</span>
-                <h3>{offer.title}</h3>
-                <p>{offer.description}</p>
-              </article>
-            ))}
+const Licensing=()=>(
+  <div className="di-site">
+    <Header/>
+    <main className="di-page">
+      <section className="di-page-hero">
+        <div className="di-container">
+          <span className="di-eyebrow">SOFTWARE LICENSING & ACQUISITIONS</span>
+          <h1>A smarter starting point for your next software product.</h1>
+          <p>Explore commercial options for eligible ready-built applications, white-label software and selected technology assets. We start with your requirements and share available products through a qualified inquiry.</p>
+          <div className="di-page-hero-actions">
+            <a className="di-button di-button--primary" href="mailto:developiq01@gmail.com?subject=Software%20Licensing%20Inquiry">Request software availability <span className="di-arrow" aria-hidden="true">↗</span></a>
+            <Link className="di-button di-button--outline" to="/Portfolio">View selected work <span className="di-arrow" aria-hidden="true">↗</span></Link>
           </div>
         </div>
       </section>
-
-      <section className="commercial-page-section alt">
-        <div className="container">
-          <span className="commercial-eyebrow">OUR PROCESS</span>
-          <h2>From inquiry to a confident handover.</h2>
-          <div className="commercial-steps">
-            <div className="commercial-step"><strong>STEP 01</strong><h3>Define the requirement</h3><p>Tell us your industry, target users, deployment plans and whether you prefer a license or acquisition.</p></div>
-            <div className="commercial-step"><strong>STEP 02</strong><h3>Review eligible assets</h3><p>We share suitable product summaries and demonstrations after checking availability and licensing rights.</p></div>
-            <div className="commercial-step"><strong>STEP 03</strong><h3>Agree the transaction</h3><p>Finalize scope, due diligence, pricing, support and any source-code or intellectual-property transfer.</p></div>
+      <section className="di-section">
+        <div className="di-container">
+          <div className="di-section-intro"><span className="di-eyebrow">COMMERCIAL PATHWAYS</span><h2>Different needs. Different ways forward.</h2><p>From using existing technology to acquiring a transferable software asset, we'll work through a commercial structure that fits the situation.</p></div>
+          <div className="di-cards">
+            {options.map(p=><article className="di-card" key={p.num}><span className="di-card-icon" aria-hidden="true">{p.icon}</span><span className="di-card-counter">{p.num}</span><h3>{p.title}</h3><p>{p.text}</p></article>)}
           </div>
         </div>
       </section>
-
-      <section className="commercial-page-section">
-        <div className="container">
-          <div className="commercial-cta">
-            <div>
-              <h2>Looking for a software product you can launch?</h2>
-              <p>Tell us what you need. We will confirm whether an independently owned asset is available or propose a separate development engagement.</p>
-            </div>
-            <a className="commercial-primary-btn" href="mailto:developiq01@gmail.com?subject=Software%20Asset%20Inquiry">Start an inquiry →</a>
+      <section className="di-section di-section--muted">
+        <div className="di-container">
+          <div className="di-section-intro"><span className="di-eyebrow">HOW IT WORKS</span><h2>Clarity before commitment.</h2><p>We only advertise software for licensing after commercial rights have been checked.</p></div>
+          <div className="di-steps">
+            <div className="di-step"><span className="di-step-number">01 / TELL US WHAT YOU NEED</span><h3>Define your use case</h3><p>Share your market, core features, deployment plans and preferred transaction structure.</p></div>
+            <div className="di-step"><span className="di-step-number">02 / REVIEW YOUR OPTIONS</span><h3>Discuss eligible assets</h3><p>We'll confirm whether a suitable company-owned product is available and discuss any demonstration or technical review.</p></div>
+            <div className="di-step"><span className="di-step-number">03 / AGREE THE DETAILS</span><h3>License or transfer</h3><p>Settle rights, pricing, support, third-party dependencies and handover arrangements in writing.</p></div>
           </div>
-          <p className="commercial-small-print">Any licensing or sale is subject to written terms, verification of ownership, third-party licenses and applicable confidentiality and data-protection obligations.</p>
+          <p className="di-note">Confidential client projects are not automatically for sale. All licensing and acquisitions depend on verified ownership, suitable permissions and written terms.</p>
         </div>
+      </section>
+      <section className="di-cta-wrap" style={{paddingTop:90}}>
+        <div className="di-container"><div className="di-cta">
+          <div><span className="di-eyebrow di-eyebrow--light">EXPLORE THE POSSIBILITIES</span><h2>Tell us what you're looking to launch.</h2><p>We'll confirm relevant options without presenting an unverified product as available.</p></div>
+          <a className="di-button di-button--white" href="mailto:developiq01@gmail.com?subject=Software%20Asset%20Inquiry">Send an inquiry <span className="di-arrow" aria-hidden="true">↗</span></a>
+        </div></div>
       </section>
     </main>
-    <Footer />
-  </>
+    <Footer/>
+  </div>
 );
-
 export default Licensing;

@@ -1,70 +1,21 @@
 import React from 'react';
-import './footer.css';
-import '../General.css';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import 'boxicons/css/boxicons.min.css';
+import '../../Styles/premium.css';
 
-const Footer = () => {
-  return (
-    <div>
-    <footer class="w-100 py-4 flex-shrink-0">
-    <div class="container py-4">
-      
-        <div class="row gy-4 gx-5">
-            <div class="col-lg-4 col-md-6 linkAll-i linkAll">
-                <h5 class="h1 text-white ">DevelopIQ</h5>
-                <p class="small text-muted logoAll-group">Software Website...</p>
-                <p class="small text-muted mb-0 linkAll">DevelopIQ is a Nigeria IT Brand of excellence that offers High quality and easy to use bespoke website,
-                   software, digital marketing, branding, IT and associated services at affordable prices for business growth worldwide and profit
-                    traction.</p>
-            </div>
-          
-            <div class="col-lg-2 col-md-6">
-                <h5 class="text-white mb-3">Useful Links</h5>
-                <ul class="list-unstyled text-muted linkAll">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Service">Services</Link></li>
-                    <li><Link to="/Portfolio">Portfolio</Link></li>
-                    <li><Link to="/Contact">Contact</Link></li>
-                    <li><Link to="/Quote">Request  A Quote</Link></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-6 ">
-              <h5 class="text-white mb-3">Services</h5>
-              <ul class="list-unstyled text-muted linkAll">
-                  <li><a href="/service/web design.html">Web Design</a></li>
-                  <li><a href="/web development.html">Web Appilcation</a></li>
-                  <li><a href="/service/Graphics Design.html">Graphics Design</a></li>
-                  <li><a href="/Plugin Development.html">Plugin Development</a></li>
-                  <li><a href="/Marketing SEO.html">Marketing SEO</a></li>
-                  <li><a href="/Policy.html">Policy</a></li>
-                  <li><a href="/Terms and Condition.html">Terms</a></li>
-                
-              </ul>
-          </div>
-            
-            <div class="col-lg-4 col-md-6 linkAll">
-                <h5 class="text-white mb-3">Newsletter</h5>
-                <p class="small text-muted linkAll">Subscribe to get Latest Technology and Business News, Offer and connect With Us.</p>
-                <form action="#">
-                    <div class="input-group mb-3">
-                        <input class="form-control" type="text" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                        <button class="btn btn-primary buttonAll" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
+const Footer=()=> <footer className="di-footer">
+  <div className="di-container">
+    <div className="di-footer-grid">
+      <div>
+        <a href="#top" className="di-brand" aria-label="Develop-IQ Technologies home">
+          <span className="di-brand-mark" aria-hidden="true"><span/></span>
+          <span className="di-brand-name">develop<span style={{color:'#74c8ff'}}>-iq</span><em>.</em></span>
+        </a>
+        <p className="di-footer-about">We create purposeful digital products and explore opportunities to put great technology to work.</p>
+      </div>
+      <div className="di-footer-col"><h3>Explore</h3><a href="#about">About us</a><a href="#services">Services</a><a href="#work">Selected work</a></div>
+      <div className="di-footer-col"><h3>Commercial</h3><a href="#licensing">Software licensing</a><a href="#partnerships">Partnerships</a><a href="#contact">Contact</a></div>
+      <div className="di-footer-col"><h3>Get in touch</h3><p>Have a development or licensing inquiry?</p><a href="mailto:developiq01@gmail.com">developiq01@gmail.com ↗</a></div>
     </div>
-     <div class="copyright">
-      Copyright © 2023 DevelopIQ. All rights reserved  
-    </div>
-</footer>
-    </div>
-  )
-}
-
-export default Footer
+    <div className="di-footer-lower"><p>© {new Date().getFullYear()} Develop-IQ Technologies. All rights reserved.</p><span>Engineering with intention.</span></div>
+  </div>
+</footer>;
+export default Footer;

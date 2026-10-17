@@ -1,35 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './footer.css';
-import '../General.css';
+import '../../Styles/premium.css';
+
 const Footer = () => (
-  <footer className="w-100 py-4 flex-shrink-0">
-    <div className="container py-4">
-      <div className="row gy-4 gx-5">
-        <div className="col-lg-5 col-md-6 linkAll">
-          <h5 className="h3 text-white">Develop-IQ Technologies</h5>
-          <p className="small text-muted">Custom software engineering, eligible software asset licensing and technology partnerships.</p>
-          <p className="small text-muted">Nigeria · Working with businesses worldwide</p>
+  <footer className="di-footer">
+    <div className="di-container">
+      <div className="di-footer-grid">
+        <div>
+          <Link to="/" className="di-brand" aria-label="Develop-IQ Technologies home">
+            <span className="di-brand-mark" aria-hidden="true"><span /></span>
+            <span className="di-brand-name">develop<span style={{color:'#74c8ff'}}>-iq</span><em>.</em></span>
+          </Link>
+          <p className="di-footer-about">Thoughtful software engineering, eligible technology licensing and meaningful partnerships. Based in Nigeria, working with businesses worldwide.</p>
         </div>
-        <div className="col-lg-3 col-md-6 linkAll">
-          <h5 className="text-white mb-3">Explore</h5>
-          <ul className="list-unstyled">
-            <li><Link to="/Service">Development Services</Link></li>
-            <li><Link to="/Portfolio">Selected Work</Link></li>
-            <li><Link to="/SoftwareLicensing">Software Licensing</Link></li>
-            <li><Link to="/TechnologyPartnerships">Technology Partnerships</Link></li>
-            <li><Link to="/About">About</Link></li>
-          </ul>
+        <div className="di-footer-col">
+          <h3>Explore</h3>
+          <Link to="/Service">Our services</Link>
+          <Link to="/Portfolio">Selected work</Link>
+          <Link to="/About">About the studio</Link>
         </div>
-        <div className="col-lg-4 col-md-12 linkAll">
-          <h5 className="text-white mb-3">Let's talk</h5>
-          <p className="small text-muted">Have a software requirement or want to discuss a commercial partnership?</p>
-          <a href="mailto:developiq01@gmail.com?subject=Develop-IQ%20Inquiry">developiq01@gmail.com</a>
-          <div className="mt-3"><Link to="/Contact">Contact us →</Link></div>
+        <div className="di-footer-col">
+          <h3>Commercial</h3>
+          <Link to="/SoftwareLicensing">Software licensing</Link>
+          <Link to="/TechnologyPartnerships">Partnerships</Link>
+          <Link to="/Contact">Get in touch</Link>
+        </div>
+        <div className="di-footer-col">
+          <h3>Start a conversation</h3>
+          <p>Tell us about your software requirements or commercial partnership goals.</p>
+          <a href="mailto:developiq01@gmail.com?subject=Develop-IQ%20Inquiry">developiq01@gmail.com ↗</a>
         </div>
       </div>
+      <div className="di-footer-lower">
+        <p>© {new Date().getFullYear()} Develop-IQ Technologies. All rights reserved.</p>
+        <span>Engineering with intention.</span>
+      </div>
     </div>
-    <div className="copyright">Copyright © {new Date().getFullYear()} Develop-IQ Technologies. All rights reserved.</div>
   </footer>
 );
+
 export default Footer;

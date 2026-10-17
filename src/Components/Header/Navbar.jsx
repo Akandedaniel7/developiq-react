@@ -45,12 +45,14 @@ const Navbar = () => {
         <NavLink className="nav-link scrollto " to="/Portfolio">Portfolio</NavLink>
         </li>
 
+        <li><NavLink className="nav-link scrollto" to="/SoftwareLicensing">Software Licensing</NavLink></li>
+        <li><NavLink className="nav-link scrollto" to="/TechnologyPartnerships">Partnerships</NavLink></li>
         <li>
         <NavLink className="nav-link scrollto" to="/Contact">Contact</NavLink>
         </li>
 
         <li>
-        <NavLink className="getstarted scrollto" to="/Quote">REQUEST A QUOTE</NavLink>
+        <NavLink className="getstarted scrollto" to="/Quote">GET A QUOTE</NavLink>
         </li>
         </ul>
         <div onClick={navToggle} className={toggleIcon}>

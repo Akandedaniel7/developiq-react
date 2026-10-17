@@ -56,67 +56,11 @@ const Form = () => {
         </div>
 
         <div className="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-          <form  className="php-email-form" method='POST'>
-           {/* Name input field */}
-<div className="form-group">
-<input
-  type="text"
-  name="Name"
-  value=''
-  className="form-control"
-  id="name"
-  placeholder="Your Name"
-  required
-/>
-</div>
-
-{/* Email input field */}
-<div className="form-group">
-<input
-  type="email"
-  name="Email"
-  value=''
-  className="form-control"
-  id="email"
-  placeholder="Your Email"
-  required
-/>
-</div>
-
-{/* Subject input field */}
-<div className="form-group">
-<input
-  type="text"
-  name="Subject"
-  value=''
-  className="form-control"
-  id="subject"
-  placeholder="Subject"
-  required
-/>
-</div>
-
-{/* Message input field */}
-<div className="form-group">
-<textarea
-  name="Message" 
-  value=''
-  className="form-control"
-  rows="5"
-  placeholder="Message"
-  required
-></textarea>
-</div>
-
-        { /*    <div className="my-3">
-              <div className="loading">Loading</div>
-              <div className="error-message"></div>
-              <div className="sent-message">Your message has been sent. Thank you!</div>
-            </div> */}
-            <div className="text-center">
-            <button type="submit">Send Message</button>
-            </div>
-          </form>
+          <div className="p-4" style={{border: '1px solid #e1eaf5', borderRadius: 12, background: '#f8fbff'}}>
+            <h4>Start a conversation</h4>
+            <p>Whether you need a custom application, a white-label license or a technology partnership, email our team with a short description of your requirements.</p>
+            <a className="btn btn-primary" href="mailto:developiq01@gmail.com?subject=Develop-IQ%20Business%20Inquiry">Email Develop-IQ Technologies</a>
+          </div>
         </div>
 
       </div>

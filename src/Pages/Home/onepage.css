@@ -1,0 +1,40 @@
+
+/* One-page portfolio presentation — complements the Develop-IQ premium design system. */
+.di-onepage section[id]{scroll-margin-top:83px}
+.di-onepage #top{scroll-margin-top:0}
+.di-onepage-about h2{font-family:"Manrope",sans-serif;font-size:clamp(33px,3.6vw,46px);font-weight:850;letter-spacing:-.052em;line-height:1.19;color:#10213d;margin:17px 0 22px}
+.di-onepage-about p{font-size:15px;line-height:1.95;color:#62718b;margin-bottom:17px}
+.di-text-link{display:inline-flex;gap:13px;align-items:center;color:#1b73da!important;font-size:13px;font-weight:850;margin-top:11px}
+.di-onepage .di-work-section{background:#fff}
+.di-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 21px}
+.di-work-card{min-width:0}
+.di-work-preview{position:relative;display:block;height:242px;border-radius:14px;overflow:hidden;isolation:isolate;color:#fff!important;background:#162d50;transition:transform .25s,box-shadow .25s}
+.di-work-preview:hover{transform:translateY(-4px);box-shadow:0 19px 36px rgba(22,46,81,.14)}
+.di-work-preview--vacua{background:linear-gradient(145deg,#254265,#071c38)}
+.di-work-preview--mimi{background:linear-gradient(135deg,#65352b,#26111b)}
+.di-work-preview--cliq{background:linear-gradient(135deg,#166d72,#083539)}
+.di-work-preview--dfab{background:linear-gradient(135deg,#292d5d,#0d1431)}
+.di-work-preview--awosanya{background:linear-gradient(135deg,#837157,#29303c)}
+.di-work-preview--daytopia{background:linear-gradient(135deg,#784da3,#1e214c)}
+.di-work-browser{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;height:38px;border-bottom:1px solid rgba(255,255,255,.17);padding:0 16px;color:rgba(255,255,255,.67);font-size:9px;letter-spacing:.02em}
+.di-work-browser-dots{display:inline-flex;gap:4px}
+.di-work-browser-dots i{width:5px;height:5px;background:rgba(255,255,255,.55);border-radius:50%;display:block}
+.di-work-art{position:absolute;left:27px;right:27px;top:50%;transform:translateY(-38%);z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.di-work-monogram{width:54px;height:54px;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);border-radius:12px;color:#fff;font-size:23px;font-weight:850;letter-spacing:-.055em}
+.di-work-art strong{font-size:19px;font-weight:850;letter-spacing:-.045em;line-height:1.2;color:#fff;max-width:270px}
+.di-work-art>span{font-size:10px;color:rgba(255,255,255,.73);font-weight:700;letter-spacing:.065em;text-transform:uppercase}
+.di-work-decoration{position:absolute;right:-75px;bottom:-142px;width:265px;height:265px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 35px rgba(255,255,255,.045),0 0 0 74px rgba(255,255,255,.03)}
+.di-work-info{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;padding:22px 3px 5px}
+.di-work-type{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#2f7fe3;font-weight:850}
+.di-work-info h3{font-size:18px;color:#142742;font-weight:850;letter-spacing:-.035em;line-height:1.35;margin:7px 0 9px}
+.di-work-info p{color:#69788c;line-height:1.7;font-size:12px;margin:0}
+.di-work-visit{display:grid;place-items:center;flex:0 0 35px;width:35px;height:35px;color:#1f6dc8!important;background:#eff6ff;border-radius:50%;font-size:19px;font-weight:700}
+.di-work-visit:hover{background:#d8eaff}
+.di-work-disclaimer{margin:29px auto 0;max-width:830px;text-align:center;color:#8090a4;font-size:11px;line-height:1.7}
+.di-legal-note{font-size:12px!important;color:#77869c!important;line-height:1.75!important;max-width:780px}
+.di-partnership-note{border-left:2px solid #70b8f8;padding-left:17px;margin-top:32px}
+.di-panel-licensing{background:linear-gradient(135deg,#0e3158,#0a1d38)}
+.di-contact-email{display:inline-block;color:#96ccff!important;font-size:14px;font-weight:800;letter-spacing:.005em;margin-top:21px;text-decoration:underline!important;text-underline-offset:4px}
+.di-work-card:focus-within .di-work-preview{outline:2px solid #4298f4;outline-offset:3px}
+@media(max-width:970px){.di-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.di-work-preview{height:240px}}
+@media(max-width:670px){.di-work-grid{grid-template-columns:1fr;gap:32px}.di-work-preview{height:247px}.di-work-info{padding-top:17px}.di-onepage section[id]{scroll-margin-top:72px}.di-hero-inner{gap:0}}

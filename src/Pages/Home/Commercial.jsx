@@ -1,58 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './commercial.css';
+import '../../Styles/premium.css';
 
-const offers = [
-  {
-    number: '01',
-    label: 'White-label licensing',
-    title: 'Launch under your brand',
-    description: 'Explore independently owned software that can be branded and deployed for your business, subject to product availability and agreed licensing terms.',
-    link: '/SoftwareLicensing',
-    action: 'Explore licensing'
-  },
-  {
-    number: '02',
-    label: 'Software asset acquisition',
-    title: 'Acquire technology, not a backlog',
-    description: 'Discuss selected software assets that may be available for a complete transfer of defined source-code and intellectual-property rights.',
-    link: '/SoftwareLicensing',
-    action: 'Discuss acquisition'
-  },
-  {
-    number: '03',
-    label: 'Engineering partnerships',
-    title: 'Explore technical collaboration',
-    description: 'Work with us on software engineering, permitted codebase licensing, and AI training or evaluation partnerships where rights and use cases align.',
-    link: '/TechnologyPartnerships',
-    action: 'Explore partnerships'
-  }
+const paths = [
+  {icon:'◇',number:'01 / ENGINEER',title:'Custom software development',desc:'Thoughtfully designed web applications, mobile experiences and operational software tailored to your requirements.',to:'/Service',cta:'Explore our services'},
+  {icon:'▣',number:'02 / LICENSE',title:'Software licensing & acquisition',desc:'Explore eligible company-owned products available for white-label licensing or discuss a tailored asset acquisition.',to:'/SoftwareLicensing',cta:'Explore licensing'},
+  {icon:'↗',number:'03 / PARTNER',title:'Technical & AI partnerships',desc:'Collaborate with our team on software engineering and responsibly scoped proprietary technology or evaluation opportunities.',to:'/TechnologyPartnerships',cta:'Explore partnerships'}
 ];
 
 const Commercial = () => (
-  <section className="commercial-overview" aria-labelledby="commercial-heading">
-    <div className="container">
-      <div className="commercial-section-heading">
-        <span className="commercial-eyebrow">BEYOND CUSTOM DEVELOPMENT</span>
-        <h2 id="commercial-heading">More ways to build, launch and grow.</h2>
-        <p>Alongside client development, Develop-IQ explores licensing and acquisition opportunities for eligible company-owned software assets.</p>
-      </div>
-      <div className="commercial-offer-grid">
-        {offers.map((offer) => (
-          <article className="commercial-offer-card" key={offer.number}>
-            <div className="commercial-card-top"><span>{offer.label}</span><strong>{offer.number}</strong></div>
-            <h3>{offer.title}</h3>
-            <p>{offer.description}</p>
-            <Link to={offer.link}>{offer.action} <span aria-hidden="true">↗</span></Link>
-          </article>
-        ))}
-      </div>
-      <div className="commercial-assurance">
-        <span className="commercial-assurance-dot" aria-hidden="true" />
-        <p>Client-owned software and confidential engineering materials are not offered for resale or disclosure without the appropriate rights and permissions.</p>
+  <>
+    <div className="di-intro-ribbon" aria-label="Develop-IQ capabilities">
+      <div className="di-container di-ribbon-inner">
+        <span>Product engineering</span><span>Software assets</span><span>Technical partnerships</span>
       </div>
     </div>
-  </section>
+    <section className="di-section" aria-labelledby="di-ways-heading">
+      <div className="di-container">
+        <div className="di-section-top">
+          <div>
+            <span className="di-eyebrow">WHAT WE DO</span>
+            <h2 id="di-ways-heading" className="di-section-heading">Technology for the <br/>next move.</h2>
+          </div>
+          <p>Not every business needs to start at zero. We provide engineering expertise and explore commercially available technology to help bring the right solution to life.</p>
+        </div>
+        <div className="di-cards">
+          {paths.map(path => (
+            <article className="di-card" key={path.number}>
+              <span className="di-card-icon" aria-hidden="true">{path.icon}</span>
+              <span className="di-card-counter">{path.number}</span>
+              <h3>{path.title}</h3>
+              <p>{path.desc}</p>
+              <Link to={path.to}>{path.cta} <span className="di-arrow" aria-hidden="true">↗</span></Link>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
 );
-
 export default Commercial;
